@@ -1,0 +1,483 @@
+/* entire page code */
+
+<style>
+  
+  .onIndx .blogPts .ntry, .PopularPosts, .widget.Label, .footer, .wvC, .navI:checked ~ .mainWrp .blogMn, .headCn, .navS, .brdCmb, .pTtl.itm, .mobMn, .mnMob:not(.no-items) + .mnMen, .qeBtn , .tIc, .mnBrs {
+  
+  display: none;
+  
+  }
+  
+  .pS p{
+  
+  margin:0;
+  
+  }
+  
+  .blogM, .blogCont, .secIn, .bD:not(.MN-4) .mobMn:not(.no-items) + footer{
+  padding:0;
+  
+  }
+  
+  
+  
+  
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+/* Hidden Items */
+
+.main-container nav .menu-button,
+.mobile-menu-items {
+  display: none;
+}
+
+.main-container {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 32px;
+  color: #fff;
+  z-index: 2;
+  background: #000;
+  transition: all 400ms ease;
+
+  position: relative;
+}
+
+.main-container video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.main-container .bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  opacity: 0.8;
+}
+
+.main-container nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px 32px;
+
+  opacity: 0;
+
+  animation: fadeIn 1000ms ease-in-out forwards;
+  animation-delay: 1000ms;
+}
+
+.main-container nav .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.main-container nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-container nav ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.main-container nav ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: all 400ms ease;
+}
+
+.main-container nav ul a:hover::after {
+  width: 100%;
+}
+
+.main-container .hero-section {
+  position: relative;
+  z-index: 2;
+ 
+}
+
+.main-container .hero-section h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 90px;
+  margin: 0;
+  transform: translateY(15px);
+  opacity: 0;
+
+  animation: fadeIn 1000ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-container .hero-section p {
+   font-family: 'SF Pro Display', sans-serif;
+  font-size: 17px;
+  margin-top: -8px;
+  transform: translateY(15px);
+  opacity: 0;
+  margin-bottom:20px;
+                                            
+    word-spacing: 2px;
+    letter-spacing: 1px;
+  
+  
+
+  animation: fadeIn 1000ms ease-in-out forwards;
+  animation-delay: 400ms;
+}
+
+.main-container .hero-section a.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #d62828;
+  padding: 10px 32px;
+  border-left: 8px solid #f1faee;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 400ms ease;
+
+  opacity: 0;
+
+  animation: fadeIn 1000ms ease-in-out forwards;
+  animation-delay: 1000ms;
+}
+
+.main-container .hero-section a.btn:hover {
+  background: #a11b1b;
+}
+
+.main-container .social {
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  padding: 32px;
+
+  opacity: 0;
+
+  animation: fadeIn 500ms ease-in-out forwards;
+  animation-delay: 2000ms;
+}
+
+.main-container .social a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 16px;
+}
+
+.main-container .social a:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .main-container nav .menu-items {
+    display: none;
+  }
+
+  .main-container nav .menu-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: all 400ms ease;
+  }
+
+  .main-container .hero-section h1 {
+    font-size: 40px;
+  }
+
+  .main-container .hero-section p {
+    font-size: 16px;
+    margin-top: -6px;
+  }
+
+  .main-container .hero-section a.btn {
+    font-size: 14px;
+  }
+
+  .main-container.active {
+    transform: translateX(-190px) rotateZ(-4deg) scale(1.1);
+  }
+
+  .main-container.active nav .menu-button {
+    opacity: 0;
+  }
+
+  .mobile-menu-items {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 190px;
+    right: 0;
+    top: 0;
+    background: #131212;
+  }
+
+  .mobile-menu-items ul {
+    list-style: none;
+    padding-left: 60px;
+  }
+
+  .mobile-menu-items ul a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin: 16px 0;
+    display: inline-block;
+  }
+
+  .mobile-menu-items .close-button {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+  }
+}
+  
+  
+  .pS h1, .pS h2, .pS h3, .pS h4, .pS h5, .pS h6 , .pEnt {
+    
+    line-height:2.6em;
+  }
+  
+  .pEnt {
+  
+    line-height:1.2em;
+    margin-top:62px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+   color:#f9f9f9;
+  }
+  
+  
+  .pS h1, .pS h2, .pS h3, .pS h4, .pS h5, .pS h6 {
+    font-weight:500;
+  }
+  
+  
+ .fa, .fa-brands, .fa-duotone, .fa-light, .fa-regular, .fa-solid, .fa-thin, .fab, .fad, .fal, .far, .fas, .fat {
+   line-height:3em;
+   
+  }
+  
+  
+
+</style>
+
+<style>
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+</style>
+                
+<link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+<div class="main-container">
+      <video autoplay loop muted>
+        <source src="https://res.cloudinary.com/krnation/video/upload/v1673810058/MYFILES/bg.mp4" type="video/mp4" />
+      </video>
+
+      <div class="bg-overlay"></div>
+
+      <nav>
+        <div class="logo">
+          <a href="https://krnation.kangananation.com/p/home.html#">KRNation</a>
+        </div>
+
+        <ul class="menu-items">
+          <li>
+            <a href="https://krnation.kangananation.com/p/home.html">Home</a>
+          </li>
+
+          <li>
+            <a href="https://krnation.kangananation.com/search/label/App">Blog</a>
+          </li>
+          
+           <li>
+            <a href="https://krnation.kangananation.com/p/downloads.html">Downloads</a>
+          </li>
+          
+           <li>
+            <a href="https://www.kangananation.com/p/signup.html">Sign Up</a>
+          </li>
+
+          <li>
+            <a href="https://krnation.kangananation.com/p/about.html">About</a>
+          </li>
+
+          <li>
+            <a href="https://krnation.kangananation.com/p/contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 8h16M4 16h16"
+            />
+          </svg>
+        </div>
+      </nav>
+
+      <header class="hero-section">
+        <h1>Kangana Nation</h1>
+        <p>Free Appstore for Everything !</p>
+        <a href="#" class="btn">Explore More</a>
+      </header>
+
+      <div class="social">
+         <a href="https://youtube.com/@KanganaNation">
+          <i class="fab fa-youtube"></i>
+        </a>
+        
+         <a href="https://twitter.com/KanganaNation">
+          <i class="fab fa-twitter"></i>
+        </a>
+        
+        <a href="https://instagram.com/kangananation">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/kangananation">
+          <i class="fab fa-facebook"></i>
+        </a>
+
+        
+      </div>
+    </div>
+
+    <div class="mobile-menu-items">
+      <div class="close-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <ul class="menu-items">
+        <li>
+          <a href="https://krnation.kangananation.com/p/home.html">Home</a>
+        </li>
+
+        <li>
+          <a href="https://krnation.kangananation.com/search/label/App">Blog</a>
+        </li>
+
+        <li>
+          <a href="https://krnation.kangananation.com/p/downloads.html">Downloads</a>
+        </li>
+        
+         <li>
+          <a href="https://www.kangananation.com/p/signup.html">Sign Up</a>
+        </li>
+        
+        <li>
+          <a href="https://krnation.kangananation.com/p/qrcode-generator.html">QR Generator</a>
+        </li>
+
+        <li>
+          <a href="https://krnation.kangananation.com/p/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+<script>
+  
+  const menuButton = document.querySelector(".main-container nav .menu-button");
+const closeButton = document.querySelector(".mobile-menu-items .close-button");
+const mainContainer = document.querySelector(".main-container");
+
+menuButton.addEventListener("click", () => {
+  mainContainer.classList.add("active");
+});
+
+closeButton.addEventListener("click", () => {
+  mainContainer.classList.remove("active");
+});
+  
+  
+  
+  </script>
+  
+ 
